@@ -4,3 +4,16 @@ on:
     types: [opened]
 permissions:
   pull-requests: write
+  
+jobs:
+  TestJob:
+    name: Test Job
+    runs-on: ubuntu-latest
+    
+    steps: 
+      - name: Checkout Actions
+      - uses: actions/checkout@v3
+      
+      - name: Echo something
+      - run: echo "Hello World!"
+  
